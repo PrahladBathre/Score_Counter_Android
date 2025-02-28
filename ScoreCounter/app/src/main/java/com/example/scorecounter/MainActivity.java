@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -18,10 +19,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-
         Button plus = findViewById(R.id.plus);
         Button minus = findViewById(R.id.minus);
         TextView result = findViewById(R.id.result);
+
+        if (savedInstanceState!=null && savedInstanceState.containsKey("KEY")){
+            count = savedInstanceState.getInt("KEY");
+            result.setText(String.valueOf(count));
+        }
+
+
 
 //        recognize the button to click or listen
 
@@ -48,6 +55,12 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("KEY",count);
     }
 }
 

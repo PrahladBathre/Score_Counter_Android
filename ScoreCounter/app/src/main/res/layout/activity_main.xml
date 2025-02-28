@@ -23,7 +23,7 @@
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="34sp"
-        android:translationY="350dp" />
+        android:translationY="150dp" />
 
     <Button
         android:id="@+id/minus"
@@ -46,7 +46,7 @@
         android:textColor="#FFFFFF"
         android:textSize="34sp"
         android:translationX="-85dp"
-        android:translationY="285dp"
+        android:translationY="85dp"
         android:visibility="visible"
         app:iconPadding="5dp"
         app:iconSize="0dp"
@@ -74,7 +74,7 @@
         android:textColor="#FFFFFF"
         android:textSize="34sp"
         android:translationX="85dp"
-        android:translationY="225dp"
+        android:translationY="25dp"
         android:visibility="visible"
         app:iconPadding="5dp"
         app:iconSize="0dp"
